@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(obstacle_detector)
 
-set(CMAKE_CXX_FLAGS "-std=c++0x -fpermissive ${CMAKE_CXX_FLAGS} -Wfatal-errors\ ")
+set(CMAKE_CXX_FLAGS "-std=c++14 -fpermissive ${CMAKE_CXX_FLAGS} -Wfatal-errors\ ")
 
 find_package(catkin REQUIRED COMPONENTS roscpp std_msgs geometry_msgs sensor_msgs visualization_msgs tf message_generation)
 find_package(Armadillo REQUIRED)

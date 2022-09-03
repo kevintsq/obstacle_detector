@@ -1,6 +1,6 @@
 <!-- Runs obstacle_detector with single Hokuyo laser scanner. -->
 <launch>
-  <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+  <include file="$(find laser_line_extraction)/launch/example.launch" />
  
   <node pkg="laser_scan_matcher" type="laser_scan_matcher_node" name="scan_matching" output="screen">
     <param name="fixed_frame" value="laser"/>
@@ -45,7 +45,5 @@
   </node>
   
   <node pkg="obstacle_detector" type="obstacle_visualizer" name="obstacle_visualizer" output="screen"/>
-  
-  <node pkg="rviz" type="rviz" name="rviz" output="screen" args="-d $(find obstacle_detector)/resources/obstacle_detector.rviz"/>
 </launch>
 
